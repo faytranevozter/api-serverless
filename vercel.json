@@ -1,13 +1,10 @@
 {
-    "headers": [
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                }
-            ]
-        }
+    "trailingSlash": false,
+    "rewrites":
+    [
+      {
+        "source": "/api/(.*)",
+        "destination": "/api/entry.go"
+      }
     ]
 }

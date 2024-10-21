@@ -1,7 +1,13 @@
 {
-    "build": {
-        "env": {
-            "GO_BUILD_FLAGS": "-ldflags '-s -w'"
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
         }
-    }
+    ]
 }

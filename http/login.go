@@ -16,5 +16,6 @@ func Login(c *gin.Context) {
 		return
 	}
 
-	controller.Login(c, payload)
+	res := controller.Login(c, payload)
+ c.JSON(res.Status, res)
 }
